@@ -42,9 +42,9 @@ export default function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Textual Column */}
-          <div className="lg:col-span-6 flex flex-col items-start text-left w-full max-w-xl">
+          <div className="min-w-0 lg:col-span-6 flex flex-col items-start text-left w-full max-w-xl">
             {/* Top Badge Accent */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
@@ -129,7 +129,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95, x: 20 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.2, type: 'spring', damping: 20 }}
-            className="lg:col-span-6 w-full flex justify-center"
+            className="min-w-0 lg:col-span-6 w-full flex justify-center"
           >
             <div className="relative w-full max-w-lg lg:max-w-none">
               {/* Decorative backglow */}
