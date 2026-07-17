@@ -44,16 +44,16 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Textual Column */}
-          <div className="lg:col-span-6 flex flex-col items-start text-left max-w-xl">
+          <div className="lg:col-span-6 flex flex-col items-start text-left w-full max-w-xl">
             {/* Top Badge Accent */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex items-center gap-2 px-3 py-1 bg-brand-primary/10 border border-brand-primary/20 rounded-full text-brand-dark dark:text-brand-primary font-semibold text-xs mb-6 uppercase tracking-wider font-mono select-none"
+              className="max-w-full flex items-center gap-2 px-3 py-1 bg-brand-primary/10 border border-brand-primary/20 rounded-full text-brand-dark dark:text-brand-primary font-semibold text-xs mb-6 uppercase tracking-wider font-mono select-none"
             >
-              <Sparkles className="w-3.5 h-3.5 text-brand-primary animate-pulse" />
-              Digital Transformation Practice
+              <Sparkles className="w-3.5 h-3.5 text-brand-primary animate-pulse shrink-0" />
+              <span className="truncate">Digital Transformation Practice</span>
             </motion.div>
 
             {/* Main Headline */}
@@ -61,7 +61,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-display text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1]"
+              className="w-full font-display text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1] break-words"
             >
               Transform Your Business Through{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-dark via-brand-primary to-brand-gold dark:from-brand-primary dark:to-brand-gold">
@@ -74,7 +74,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="mt-6 text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed font-sans"
+              className="w-full mt-6 text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed font-sans break-words"
             >
               We help businesses streamline operations, improve productivity and accelerate growth through custom ERP, CRM, AI and Digital Transformation consulting.
             </motion.p>
@@ -109,16 +109,16 @@ export default function Hero() {
               transition={{ duration: 1, delay: 0.5 }}
               className="mt-10 pt-8 border-t border-slate-200/60 dark:border-slate-800/60 w-full flex flex-wrap gap-x-6 gap-y-2 text-xs font-mono text-slate-500 dark:text-slate-400"
             >
-              <span className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-primary" />
+              <span className="flex items-center gap-1.5 shrink-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-primary shrink-0" />
                 Textile & Apparel Specialist
               </span>
-              <span className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
+              <span className="flex items-center gap-1.5 shrink-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-gold shrink-0" />
                 Pharma Compliance Built-in
               </span>
-              <span className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-dark" />
+              <span className="flex items-center gap-1.5 shrink-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-dark shrink-0" />
                 Packaging Deckle Optimization
               </span>
             </motion.div>
