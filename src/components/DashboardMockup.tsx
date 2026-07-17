@@ -341,7 +341,7 @@ export default function DashboardMockup() {
           <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
             <Activity className="w-3.5 h-3.5 text-brand-primary" /> Active System Transaction Ledger
           </span>
-          <div className="bg-slate-950 p-3 rounded-xl border border-slate-800 font-mono text-[10.5px] leading-relaxed flex flex-col gap-1.5 h-[115px] overflow-hidden">
+          <div className="bg-slate-950 p-3 rounded-xl border border-slate-800 font-mono text-[10.5px] leading-relaxed flex flex-col gap-1.5 h-[142px] overflow-hidden">
             <AnimatePresence initial={false}>
               {logs.map(log => (
                 <motion.div
