@@ -106,13 +106,13 @@ export default function DashboardMockup() {
       </div>
 
       {/* Internal Navigation Tabs */}
-      <div className="px-4 bg-slate-950/50 border-b border-slate-800 flex justify-between items-center">
-        <div className="flex gap-2">
+      <div className="px-2 sm:px-4 bg-slate-950/50 border-b border-slate-800 flex flex-wrap justify-between items-center gap-x-2">
+        <div className="flex gap-0.5 sm:gap-2">
           {(['overview', 'integration', 'performance'] as const).map(tab => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-4 py-2 text-xs font-medium capitalize border-b-2 transition-all duration-300 ${
+              className={`px-2 sm:px-4 py-2 text-[10px] sm:text-xs font-medium capitalize border-b-2 transition-all duration-300 whitespace-nowrap ${
                 activeTab === tab
                   ? 'border-brand-primary text-brand-primary bg-slate-900/50'
                   : 'border-transparent text-slate-400 hover:text-slate-200'
@@ -122,45 +122,45 @@ export default function DashboardMockup() {
             </button>
           ))}
         </div>
-        <div className="text-xs font-mono text-slate-500 pr-2">
+        <div className="hidden min-[420px]:block text-[10px] sm:text-xs font-mono text-slate-500 pr-2 whitespace-nowrap">
           Refresh rate: 4.5s
         </div>
       </div>
 
       {/* Main Dashboard Content */}
-      <div className="p-6 flex-1 flex flex-col gap-5 min-h-[350px]">
+      <div className="p-3 sm:p-6 flex-1 flex flex-col gap-4 sm:gap-5 min-h-[350px]">
         {activeTab === 'overview' && (
           <>
             {/* Top Stat Boxes */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 flex flex-col">
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
-                  <TrendingUp className="w-3.5 h-3.5 text-brand-primary" /> System Efficiency
+            <div className="grid grid-cols-1 min-[480px]:grid-cols-3 gap-3 sm:gap-4">
+              <div className="p-3 sm:p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 flex flex-col min-w-0">
+                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider flex items-center gap-1.5 truncate">
+                  <TrendingUp className="w-3.5 h-3.5 text-brand-primary shrink-0" /> <span className="truncate">System Efficiency</span>
                 </span>
-                <span className="text-2xl font-semibold tracking-tight mt-1 text-white font-mono">{throughput}%</span>
-                <span className="text-[10px] text-emerald-400 mt-1 font-medium">↑ +3.4% this quarter</span>
+                <span className="text-xl sm:text-2xl font-semibold tracking-tight mt-1 text-white font-mono">{throughput}%</span>
+                <span className="text-[10px] text-emerald-400 mt-1 font-medium truncate">↑ +3.4% this quarter</span>
               </div>
-              <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 flex flex-col">
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
-                  <RefreshCw className="w-3.5 h-3.5 text-brand-gold" /> API Sync Delay
+              <div className="p-3 sm:p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 flex flex-col min-w-0">
+                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider flex items-center gap-1.5 truncate">
+                  <RefreshCw className="w-3.5 h-3.5 text-brand-gold shrink-0" /> <span className="truncate">API Sync Delay</span>
                 </span>
-                <span className="text-2xl font-semibold tracking-tight mt-1 text-white font-mono">{syncDelay}ms</span>
-                <span className="text-[10px] text-slate-400 mt-1 font-medium">Optimized node queries</span>
+                <span className="text-xl sm:text-2xl font-semibold tracking-tight mt-1 text-white font-mono">{syncDelay}ms</span>
+                <span className="text-[10px] text-slate-400 mt-1 font-medium truncate">Optimized node queries</span>
               </div>
-              <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 flex flex-col">
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
-                  <Server className="w-3.5 h-3.5 text-emerald-400" /> Database Uptime
+              <div className="p-3 sm:p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 flex flex-col min-w-0">
+                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider flex items-center gap-1.5 truncate">
+                  <Server className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> <span className="truncate">Database Uptime</span>
                 </span>
-                <span className="text-2xl font-semibold tracking-tight mt-1 text-white font-mono">99.98%</span>
-                <span className="text-[10px] text-emerald-400 mt-1 font-medium">Enterprise grade clusters</span>
+                <span className="text-xl sm:text-2xl font-semibold tracking-tight mt-1 text-white font-mono">99.98%</span>
+                <span className="text-[10px] text-emerald-400 mt-1 font-medium truncate">Enterprise grade clusters</span>
               </div>
             </div>
 
             {/* Simulated Animated Graph */}
             <div className="p-4 rounded-xl bg-slate-950/40 border border-slate-800/60 flex-1 flex flex-col">
-              <div className="flex justify-between items-center mb-3">
+              <div className="flex flex-wrap justify-between items-center gap-x-3 gap-y-1 mb-3">
                 <span className="text-xs font-semibold text-slate-300">Operational Throughput (Real-Time vs Target)</span>
-                <div className="flex gap-3 text-[10px]">
+                <div className="flex gap-3 text-[10px] shrink-0">
                   <span className="flex items-center gap-1"><span className="w-2.5 h-1.5 rounded bg-brand-primary inline-block"></span>Realized</span>
                   <span className="flex items-center gap-1"><span className="w-2.5 h-1.5 rounded bg-brand-gold inline-block"></span>Optimal</span>
                 </div>
@@ -225,7 +225,8 @@ export default function DashboardMockup() {
                   <span>10:00</span>
                   <span>12:00</span>
                   <span>14:00</span>
-                  <span>Real-Time (Secured Sync)</span>
+                  <span className="hidden min-[480px]:inline">Real-Time (Secured Sync)</span>
+                  <span className="inline min-[480px]:hidden">Live</span>
                 </div>
               </div>
             </div>
